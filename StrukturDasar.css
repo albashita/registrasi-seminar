@@ -1,0 +1,260 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Header */
+header {
+    background-color: #093c80;
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 40px;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Main Content */
+main {
+    display: flex;
+    padding: 20px;
+}
+
+/* Sidebar */
+aside {
+    width: 250px;
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+    position: relative;
+    z-index: 1;
+}
+
+aside h2 {
+    margin-top: 0;
+    color: #333;
+    font-size: 24px;
+    font-family: 'Georgia', serif;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.seminar-info h3 {
+    font-size: 18px;
+    color: #004a99;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.seminar-info p {
+    font-size: 14px;
+    color: #555;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.seminar-info ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.seminar-info ul li {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+/* Form Registrasi */
+section {
+    flex: 1;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+section h2 {
+    margin-top: 0;
+    color: #333;
+    font-size: 27px;
+    font-family: 'Georgia', serif;
+    font-weight: bold;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+}
+
+form label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+form input {
+    margin-top: 5px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+form input:focus {
+    border-color: #333;
+    outline: none;
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.button-group button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.button-group button[type="submit"] {
+    background-color: #333;
+    color: white;
+}
+
+.button-group button[type="reset"] {
+    background-color: #ddd;
+    color: #333;
+}
+
+/* Footer */
+footer {
+    background-color: #093c80;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Background image dengan logo PNM */
+.container::before {
+    content: "";
+    background-image: url('https://raw.githubusercontent.com/albashita/registrasi-seminar/main/logoPNM.png');
+    background-size: 450px;
+    background-repeat: no-repeat;
+    background-position: 70% center;
+    opacity: 0.05;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Responsif untuk layar kecil (mobile) */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    aside {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+        margin-bottom: 20px;
+    }
+
+    section {
+        width: 100%;
+    }
+
+    form input {
+        width: 100%;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+
+    .button-group button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    footer button {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container::before {
+        background-size: 250px; /* Ukuran lebih kecil */
+        background-position: center center; /* Pusatkan gambar */
+    }
+}
